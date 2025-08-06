@@ -43,8 +43,8 @@ public class Doctor {
         String query = "select * from doctors where id =?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setInt(1, Id);
-            ResultSet resultset =  preparedStatement.executeQuery( query);
+            preparedStatement.setInt(1,Id);
+            ResultSet resultset =  preparedStatement.executeQuery();
             if(resultset.next()){
               return true;
             }
